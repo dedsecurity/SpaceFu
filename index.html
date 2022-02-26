@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceU - Launcher</title>
+</head>
+<body>
+    <div class="left">
+        <button>Command:</button>
+        <script>
+            var command = document.querySelector('.left button');
+            command.addEventListener('click', function() {
+                var command = prompt('Enter command:');
+                if (command == 'settings') {
+                    window.location.href = 'spaceshipsettings.txt';
+                }
+                if (command == 'location') {
+                    if ('geolocation' in navigator){
+                    /*navigator.geolocation.getCurrentPosition(function(position){
+                        console.log(position)
+                    }, function(error){
+                        console.log(error)
+                    })*/
+                    const watcher = navigator.geolocation.watchPosition(function(position){
+                        console.log(position)
+                    }, function(error){
+                        console.log(error)
+                    }, { enableHighAccuracy: true, maximumAge: 30000, timeout: 30000 })
+                    /*navigator.geolocation.clearWatch(watcher)*/
+                }else{
+                    alert('não foi possível localizar');
+                }
+                }
+                if (command == 'control') {
+                    window.location.href = 'control.html';
+                }
+            });
+        </script>
+
+        <script>
+            function methods() {
+                console.log('Equilibration\nSpinning')
+            }
+            methods();
+        </script>
+    </div>
+    <img src="/qrcode_dedsecurity.com.png" alt="">
+    <style>
+        body {
+            background-color: #070D40;
+        }
+        .left {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+        .left {
+            text-decoration: none;
+        }
+        .left > button {
+            background-color: #fff;
+            color: #000;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 1.2rem;
+            padding: 6px 12px 6px 12px;
+            border: 0.1rem solid #fff;
+            font-size: 1.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            -webkit-transition: .2s ease-in;
+            transition: .2s ease-in;
+        }
+
+        .left > button.outlined {
+            background-color: transparent;
+            border: 0.1rem solid #888;
+            color: #888;
+
+        }
+        .left > button:hover {
+            background: transparent;
+            color: #000;
+            border: 0.1rem solid #000;
+        }
+    </style>
+</body>
+</html>

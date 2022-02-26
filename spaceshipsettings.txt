@@ -1,0 +1,18 @@
+0001 Noble gas, Gas
+0010 Xenon, Noble Gas
+0011 Electromagnetic field, Effects
+0100 Plasma, Anatomy
+0101 Acceleration, Effects
+0110 Gravity, Effects
+0111 Eletric field, Effects
+1000 Amplification, Effects
+1001 Electromagnetic radiation
+1010 Equilibration, Methods
+1011 Aluminum, Metal
+1100 Electrodynamics, Effects
+1101 Electron-positron pair, Effects
+1110 Potentiating, Effects
+1111 Quantum field theories, Effects
+0001 0000 Radiation effect, Effects, 7,46 Hertz
+0001 0001 Repelling, Effects
+0001 0010 Spinning, Methods
