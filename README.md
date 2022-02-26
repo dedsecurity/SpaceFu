@@ -1,6 +1,12 @@
 <h1>The SpaceFu</h1>
 
-Control panel for ship
+Control panel for ship.
+
+```bash
+Website:  https://www.dedsecurity.com
+Author:   Simon Kinjo
+Maintenance:  Simon Kinjo
+```
 
 ## Installation
 
